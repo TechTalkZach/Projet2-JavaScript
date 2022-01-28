@@ -8,7 +8,7 @@ function geCurrentMonth() {
     var currentMois = todayDate.getMonth();
     var nomDuMois = mois[currentMois];
 
-    document.getElementById('mois').innerHTML = nomDuMois;
+    return nomDuMois;
 
 }
-console.log()
+console.log(getCurrentMonth());
