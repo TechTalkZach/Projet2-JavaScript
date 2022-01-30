@@ -43,13 +43,35 @@ function getCurrentMonth() {
         return season[3];
  }
 
- function getRandomTemperature() {
 
-
- }
+ function getRandomArbitrary(min, max) {     //Fonction qui retourne un nombre random entre 2 chiffres
+    return Math.random() * (max - min) + min;
+}
 
  let numericMonth = getCurrentMonth();
  console.log(numericMonth);
  console.log(convertMonthToString(numericMonth));
  console.log(getSeason(numericMonth));
+
+let saison = getSeason();
+
+function getRandomTemperature() {
+
+    let automneHiverRandTemp = Math.round(getRandomArbitrary(-20,10),2);  //
+
+    let printempsEteRandTemp = Math.round(getRandomArbitrary(10,35),2);
+
+    if(saison == "Winter" || saison == "Spring")
+        
+        return automneHiverRandTemp;
+
+    if(saison == "Summer" || saison == "Fall")
+        
+        return printempsEteRandTemp;
+ }
+
+let temperature =getRandomTemperature(); 
+
+console.log(temperature);               //variable random temperature
+
 
